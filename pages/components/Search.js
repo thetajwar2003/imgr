@@ -10,11 +10,7 @@ export default function Search() {
             const params = new URLSearchParams({ q });
             // TODO: debounce this
 
-            const res = await fetch('/api/search?' + params, {
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
+            const res = await fetch('/api/search?' + params);
 
             const result = await res.json();
             // console.log(result);
